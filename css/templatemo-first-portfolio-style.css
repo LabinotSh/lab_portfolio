@@ -171,9 +171,30 @@ strong {
 }
 
 .section-title-wrap-2 {
-  background: var(--secondary-color);
+  background: #62486c;
   border-radius: var(--border-radius-small);
   padding: 10px 30px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 
